@@ -12,6 +12,11 @@
         <item name="android:windowBackground">@color/black</item>
         <item name="android:navigationBarColor">@color/black</item>
         <item name="android:actionBarStyle">@color/black</item>
+        <item name="android:alertDialogTheme">@style/WindowDialog</item>
+    </style>
+
+    <style name="WindowDialog" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:background">@color/primary_material_dark</item>
     </style>
 
     <style name="DarkTheme.NoActionBar">
@@ -21,6 +26,6 @@
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
 
 </resources>

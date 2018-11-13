@@ -2,8 +2,21 @@
     <string name="app_name">C Station</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello World</string>
-    <string name="serverHint">Server Address</string>
-    <string name="userHint">Username</string>
-    <string name="passHint">Password</string>
-    <string name="certSwitchText">Download server certificate on HTTPS</string>
+
+    <string name="servAddressKey">key_servAddress</string>
+    <string name="servAddressTitle">Address</string>
+    <string name="servAddressSummary">HTTP(S) address to reach server by.</string>
+
+    <string name="servCertSwitchKey">key_servCertSwitch</string>
+    <string name="servCertSwitchTitle">Download HTTPS Certificate</string>
+    <string name="servCertSwitchSummary">Useful when using a self signed HTTPS certificate. The app will download the certificate on initial request and trust it in subsequent ones.</string>
+
+    <string name="credUserKey">key_credUser</string>
+    <string name="credUserTitle">Username</string>
+    <string name="credUserSummary">User to login and perform actions as.</string>
+
+    <string name="credPassKey">key_credPass</string>
+    <string name="credPassTitle">Password</string>
+    <string name="credPassSummary">Password for user.</string>
+
 </resources>

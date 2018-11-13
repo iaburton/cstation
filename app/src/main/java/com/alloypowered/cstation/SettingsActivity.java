@@ -1,11 +1,11 @@
 package com.alloypowered.cstation;
 
-import android.support.v7.app.AppCompatActivity;
+import android.preference.PreferenceFragment;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 
-public class SettingsActivity extends AppCompatActivity {
+public class SettingsActivity extends AppCompatPreferenceActivity {
 
     public final static int FOR_RESULT = 1;
     public final static int NO_CHANGE = 2;
@@ -16,8 +16,11 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        //setContentView(R.layout.activity_settings);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Log.i(TAG, "In onCreate");
+        // load settings fragment
+        getFragmentManager().beginTransaction().replace(android.R.id.content, new CSPreferenceFragment()).commit();
     }
 
     @Override
@@ -37,6 +40,14 @@ public class SettingsActivity extends AppCompatActivity {
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
+        }
+    }
+
+    public static class CSPreferenceFragment extends PreferenceFragment {
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            addPreferencesFromResource(R.xml.settings_preference);
         }
     }
 }

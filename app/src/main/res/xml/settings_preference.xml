@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Server">
+
+        <EditTextPreference
+            android:defaultValue="https://"
+            android:key="@string/servAddressKey"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:summary="@string/servAddressSummary"
+            android:title="@string/servAddressTitle" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/servCertSwitchKey"
+            android:summary="@string/servCertSwitchSummary"
+            android:title="@string/servCertSwitchTitle" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Credentials">
+
+        <EditTextPreference
+            android:key="@string/credUserKey"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:summary="@string/credUserSummary"
+            android:title="@string/credUserTitle" />
+        <EditTextPreference
+            android:inputType="textPassword"
+            android:key="@string/credPassKey"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:summary="@string/credPassSummary"
+            android:title="@string/credPassTitle" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
