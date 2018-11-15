@@ -1,7 +1,9 @@
 package com.alloypowered.cstation;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -51,5 +53,11 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         Log.i(TAG, "Got request: "+requestCode+" result: "+resultCode);
+
+        //TODO relaunch settings if user didn't set things up & provide toast notification
+        //Or provide a dialog and ask the user to setup or exit
+        //SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        //String user = prefs.getString(getString(R.string.credUserKey), null);
+        //Log.i(TAG, "Got user: " + user);
     }
 }

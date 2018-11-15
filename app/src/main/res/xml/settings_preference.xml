@@ -21,13 +21,14 @@
     </PreferenceCategory>
     <PreferenceCategory android:title="Credentials">
 
-        <EditTextPreference
+        <com.alloypowered.cstation.EncryptedEditTextPreference
             android:key="@string/credUserKey"
             android:selectAllOnFocus="true"
             android:singleLine="true"
             android:summary="@string/credUserSummary"
             android:title="@string/credUserTitle" />
-        <EditTextPreference
+        <com.alloypowered.cstation.EncryptedEditTextPreference
+            android:dependency="@string/credUserKey"
             android:inputType="textPassword"
             android:key="@string/credPassKey"
             android:selectAllOnFocus="true"
