@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="DarkTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="DarkTheme" parent="Theme.AppCompat">
         <item name="android:colorPrimary">@color/colorPrimary</item>
         <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="android:textColorPrimary">@color/white</item>
@@ -15,7 +15,7 @@
         <item name="android:alertDialogTheme">@style/WindowDialog</item>
     </style>
 
-    <style name="WindowDialog" parent="Theme.AppCompat.Dialog.Alert">
+    <style name="WindowDialog" parent="Theme.AppCompat.Dialog">
         <item name="android:background">@color/primary_material_dark</item>
     </style>
 

@@ -12,11 +12,11 @@
     <string name="servCertSwitchSummary">Useful when using a self signed HTTPS certificate. The app will download the certificate on initial request and trust it in subsequent ones.</string>
 
     <string name="credUserKey">key_credUser</string>
-    <string name="credUserTitle">Username</string>
-    <string name="credUserSummary">User to login and perform actions as.</string>
+    <string name="credUserTitle">User</string>
+    <string name="credUserSummary">To login and perform actions as.</string>
 
     <string name="credPassKey">key_credPass</string>
     <string name="credPassTitle">Password</string>
-    <string name="credPassSummary">Password for user.</string>
+    <string name="credPassSummary">For user.</string>
 
 </resources>

@@ -1,11 +1,13 @@
 package com.alloypowered.cstation;
 
-import android.preference.PreferenceFragment;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.PreferenceFragmentCompat;
+import androidx.preference.PreferenceScreen;
 
-public class SettingsActivity extends AppCompatPreferenceActivity {
+public class SettingsActivity extends AppCompatActivity {
 
     public final static int FOR_RESULT = 1;
     public final static int NO_CHANGE = 2;
@@ -20,7 +22,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Log.i(TAG, "In onCreate");
         // load settings fragment
-        getFragmentManager().beginTransaction().replace(android.R.id.content, new CSPreferenceFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(android.R.id.content, new CSPreferenceFragment()).commit();
     }
 
     @Override
@@ -43,11 +45,10 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         }
     }
 
-    public static class CSPreferenceFragment extends PreferenceFragment {
+    public static class CSPreferenceFragment extends PreferenceFragmentCompat {
         @Override
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            addPreferencesFromResource(R.xml.settings_preference);
+        public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+            setPreferencesFromResource(R.xml.settings_preference, rootKey);
         }
     }
 }

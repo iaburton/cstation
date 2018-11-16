@@ -1,7 +1,7 @@
 package com.alloypowered.cstation;
 
 import android.content.Context;
-import android.preference.EditTextPreference;
+import androidx.preference.EditTextPreference;
 import android.util.AttributeSet;
 import android.util.Log;
 
@@ -26,10 +26,15 @@ public class EncryptedEditTextPreference extends EditTextPreference {
         super(context);
     }
 
+//    @Override
+//    protected void onSetInitialValue(boolean restoreValue, Object defaultValue) {
+//        Log.i(TAG, "in onSetInitialValue: " + restoreValue + " : " + defaultValue);
+//        super.setText(restoreValue ? getPersistedString(null) : (String) defaultValue);
+//    }
+
     @Override
-    protected void onSetInitialValue(boolean restoreValue, Object defaultValue) {
-        Log.i(TAG, "in onSetInitialValue: " + restoreValue + " : " + defaultValue);
-        super.setText(restoreValue ? getPersistedString(null) : (String) defaultValue);
+    protected void onSetInitialValue(Object defaultValue) {
+        super.setText(getPersistedString(null));
     }
 
     @Override
