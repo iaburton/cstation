@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<PreferenceScreen
+<androidx.preference.PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory
@@ -19,7 +19,7 @@
             android:summary="@string/servCertSwitchSummary"
             android:title="@string/servCertSwitchTitle" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Credentials">
+    <androidx.preference.PreferenceCategory android:title="Credentials">
 
         <com.alloypowered.cstation.EncryptedEditTextPreference
             android:key="@string/credUserKey"
@@ -35,6 +35,6 @@
             android:singleLine="true"
             android:summary="@string/credPassSummary"
             android:title="@string/credPassTitle" />
-    </PreferenceCategory>
+    </androidx.preference.PreferenceCategory>
 
-</PreferenceScreen>
+</androidx.preference.PreferenceScreen>
