@@ -3,38 +3,39 @@
 <androidx.preference.PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <PreferenceCategory
+    <androidx.preference.PreferenceCategory
         android:title="Server">
 
-        <EditTextPreference
+        <androidx.preference.EditTextPreference
             android:defaultValue="https://"
-            android:key="@string/servAddressKey"
             android:selectAllOnFocus="true"
-            android:singleLine="true"
+            android:dialogLayout="@layout/edit_text_preference"
+            android:key="@string/servAddressKey"
             android:summary="@string/servAddressSummary"
             android:title="@string/servAddressTitle" />
-        <SwitchPreference
+        <androidx.preference.SwitchPreference
             android:defaultValue="false"
             android:key="@string/servCertSwitchKey"
             android:summary="@string/servCertSwitchSummary"
             android:title="@string/servCertSwitchTitle" />
-    </PreferenceCategory>
+
+    </androidx.preference.PreferenceCategory>
+
     <androidx.preference.PreferenceCategory android:title="Credentials">
 
         <com.alloypowered.cstation.EncryptedEditTextPreference
             android:key="@string/credUserKey"
             android:selectAllOnFocus="true"
-            android:singleLine="true"
+            android:dialogLayout="@layout/edit_text_preference"
             android:summary="@string/credUserSummary"
             android:title="@string/credUserTitle" />
         <com.alloypowered.cstation.EncryptedEditTextPreference
             android:dependency="@string/credUserKey"
-            android:inputType="textPassword"
+            android:dialogLayout="@layout/edit_text_preference_password"
             android:key="@string/credPassKey"
-            android:selectAllOnFocus="true"
-            android:singleLine="true"
             android:summary="@string/credPassSummary"
             android:title="@string/credPassTitle" />
+
     </androidx.preference.PreferenceCategory>
 
 </androidx.preference.PreferenceScreen>
